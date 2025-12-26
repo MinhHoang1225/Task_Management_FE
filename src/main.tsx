@@ -12,7 +12,7 @@ import router from './router.tsx';
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+  // <StrictMode>
     <QueryClientProvider client={queryClient}>
       <Provider store={store}>
         <Suspense fallback={<Spin />}>
@@ -20,5 +20,5 @@ createRoot(document.getElementById('root')!).render(
         </Suspense>
       </Provider>
     </QueryClientProvider>
-  </StrictMode>,
+  // </StrictMode>,
 );
