@@ -21,3 +21,8 @@ export interface UpdateUserPayload {
   fullName?: string;
   password?: string;
 }
+
+export interface UserSummary {
+  id: string;
+  username: string;
+}

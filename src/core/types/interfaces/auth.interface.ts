@@ -16,3 +16,4 @@ export interface RegisterPayload {
   password: string;
   fullName: string;
 }
+

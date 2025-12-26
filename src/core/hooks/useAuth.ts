@@ -23,25 +23,15 @@ export const useRegister = () => {
 
   return useMutation({
     mutationFn: async (registerUserDto: RegisterPayload) => {
-      console.log('REGISTER PAYLOAD:', registerUserDto);
-
       const response = await registerApi(registerUserDto);
-
-      console.log('AXIOS FULL RESPONSE:', response);
-      console.log('AXIOS RESPONSE DATA:', response?.data);
-
       return response?.data;
     },
 
     onSuccess: (data) => {
-      console.log('REGISTER SUCCESS DATA:', data);
       navigate('/login');
     },
 
     onError: (error: any) => {
-      console.log('REGISTER ERROR:', error);
-      console.log('ERROR RESPONSE:', error?.response);
-      console.log('ERROR MESSAGE:', error?.response?.data?.message);
     },
   });
 };
